@@ -30,17 +30,116 @@
       <p class="date"></p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+      <div class="container">
+        <table class="table">
+          <tbody>
+            <tr class="tr">
+              <td class="td time">9</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">10</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">11</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">12</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">13</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">14</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">15</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">19</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+            <tr class="tr">
+              <td class="td time">20</td>
+              <td class="td absorbing"><input type="text" class="input"></input></td>
+              <td class="td"><button class="saveBtn"><i class="far fa-save fa-2x"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="moment.js"></script>
 <script>
-    console.log(moment().format('LLLL'));
+  var currentDay = (moment().format('dddd, MMMM Do'));
+  var hour = (moment().format("h"));
+  var ampm  = (moment().format("a"));
+  var present
+  
+  $(document).ready(function() {
+    $("#currentDay").empty();
+    $("#currentDay").append("<p>",currentDay,"</p>");
+    hour = parseInt(hour);
     
+    //Assigns styling based on current time
+    if (ampm == "pm") {
+        hour = hour + 12;
+      };
+    $('.tr').each(function() {
+      if($(this).text() == hour)
+      $(this).addClass('present');
+      else if($(this).text() > hour)
+      $(this).addClass('future');
+      else
+      $(this).addClass('past');
+      })
+
+    
+    $(".time").append(":00");
+  });
+
 </script> 
 
     </script>
   </body>
 </html>
+<!--
+<table class="time-blocks">
+  <tbody>
+    <tr class="row">
+      <td class="hour">9:00</td>
+      <td class="description"></td>
+      <td><button class="saveBtn"><i class="far fa-save"></i></button></td>
+    </tr>
+    <tr class="row">
+      <td class="hour">9:00</td>
+      <td class="description"></td>
+      <td><button class="saveBtn"><i class="far fa-save"></i></button></td>
+    </tr>
+    <tr class="row">
+      <td class="hour">9:00</td>
+      <td class="description"></td>
+      <td><button class="saveBtn"><i class="far fa-save"></i></button></td>
+    </tr>
+    <tr class="row">
+      <td class="hour">9:00</td>
+      <td class="description"></td>
+      <td><button class="saveBtn"><i class="far fa-save"></i></button></td>
+    </tr>
+  </tbody>
+</table>
+-->

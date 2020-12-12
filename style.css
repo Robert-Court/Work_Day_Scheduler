@@ -13,6 +13,24 @@ textarea{
   padding: 10px;
 }
 
+.time {
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+  widows: 1px;
+  white-space: nowrap;
+  padding: none;
+  vertical-align: middle;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+.absorbing {
+  width: 100%;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -25,7 +43,7 @@ textarea{
   white-space: pre-wrap;
 }
 
-.time-block{
+.time-blocks{
   text-align: center;
   border-radius: 15px;
 }
@@ -33,7 +51,7 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
 .hour {
@@ -66,6 +84,38 @@ textarea{
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 250%;
   transition: all .3s ease-in-out;
+}
+
+.table {
+  padding: none;
+  border: 1px solid #817676;
+  border-collapse: collapse;
+  margin: 25px 0px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(19, 18, 18, 0.15);
+}
+
+.table tr {
+  border: 1px solid #887d7d;
+  padding: none;
+  margin: none;
+}
+
+.table td {
+  border: 1px solid black;
+  padding: 12px 15px;
+  margin: none;
+}
+
+.table td input {
+  background-color:inherit;
+  width: 100%;
+  height:100%;
+  box-sizing: border-box;
+  border: none;
+  margin: 0px;
+  padding: 0px;
 }
