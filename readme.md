@@ -10,7 +10,7 @@ Users are able to select:
 Yet to be completed is the ability to schedule events.
 
 ### Image of Deployed Application
-
+https://github.com/Robert-Court/Work_Day_Scheduler/blob/master/screenshot.JPG?raw=true
 
 ### Link to Deployed Application
 https://robert-court.github.io/Work_Day_Scheduler/
