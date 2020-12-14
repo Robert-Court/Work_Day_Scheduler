@@ -13,4 +13,4 @@ Yet to be completed is the ability to schedule events.
 ![Image of Application](https://github.com/Robert-Court/Password-Generator/blob/master/Password%20Generator%20Image.PNG)
 
 ### Link to Deployed Application
-https://robert-court.github.io/Password-Generator/
+https://robert-court.github.io/Work_Day_Scheduler/
